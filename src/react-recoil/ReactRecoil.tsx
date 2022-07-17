@@ -5,7 +5,7 @@ import JokesViewer from './components/JokesViewer'
 export default function ReactRecoil() {
   return (
     <RecoilRoot>
-      <h1>React Redux App</h1>
+      <h1>React Recoil App</h1>
       <JokesViewer></JokesViewer>
     </RecoilRoot>
   )

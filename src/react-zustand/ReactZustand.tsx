@@ -4,7 +4,7 @@ import JokesViewer from './components/JokesViewer'
 export default function ReactZustand() {
   return (
     <div>
-      <h1>React Redux App</h1>
+      <h1>React Zustand App</h1>
       <JokesViewer></JokesViewer>
     </div>
   )

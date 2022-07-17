@@ -5,7 +5,7 @@ import ReactContextProvider from './ReactContextProvider'
 export default function ReactContext() {
   return (
     <ReactContextProvider>
-      <h1>ContextApp</h1>
+      <h1>React Context App</h1>
       <JokesViewer></JokesViewer>
     </ReactContextProvider>
   )
