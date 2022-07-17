@@ -1,6 +1,7 @@
 import React from 'react'
 import { useRecoilValue } from 'recoil'
 import RenderCount from '../../components/RenderCount'
+import { JokeType } from '../../state.types'
 import { christmasJokesSelector, programminJokesSelector } from '../selectors'
 
 const SELECTORS_MAP = {
@@ -8,7 +9,7 @@ const SELECTORS_MAP = {
   Christmas: christmasJokesSelector
 }
 
-export default function JokeViewer(props: { type: 'Programming' | 'Christmas'; index: number }) {
+export default function JokeViewer(props: { type: JokeType; index: number }) {
   const jokes = useRecoilValue(SELECTORS_MAP[props.type])
 
   return (
@@ -16,7 +17,7 @@ export default function JokeViewer(props: { type: 'Programming' | 'Christmas'; i
       <RenderCount></RenderCount>
       <h3>Joke {props.index + 1}</h3>
       <div>
-        <span>{jokes[props.index].setup}</span> <br></br> <span>{jokes[props.index].deliver}</span>
+        <span>{jokes[props.index].setup}</span> <br></br> <span>{jokes[props.index].delivery}</span>
       </div>
     </div>
   )

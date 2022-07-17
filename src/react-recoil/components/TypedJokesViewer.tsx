@@ -1,6 +1,7 @@
 import React from 'react'
 import { useRecoilValue, useSetRecoilState } from 'recoil'
 import RenderCount from '../../components/RenderCount'
+import { JokeType } from '../../state.types'
 import { jokesAtom } from '../atoms'
 import { christmasJokesSelector, programminJokesSelector } from '../selectors'
 import JokeViewer from './JokeViewer'
@@ -10,7 +11,7 @@ const SELECTORS_MAP = {
   Christmas: christmasJokesSelector
 }
 
-export default function TypedJokesViewer(props: { type: 'Programming' | 'Christmas' }) {
+export default function TypedJokesViewer(props: { type: JokeType }) {
   const jokes = useRecoilValue(SELECTORS_MAP[props.type])
   const setTodoList = useSetRecoilState(jokesAtom)
 

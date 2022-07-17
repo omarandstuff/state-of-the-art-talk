@@ -1,9 +1,15 @@
 import React from 'react'
+import { JokesState } from '../state.types'
 
-export const ReactContextState = React.createContext<any>({})
+export interface ContextDerivatives {
+  contextState: JokesState
+  setContextState: (state: JokesState) => void
+}
+
+export const ReactContextState = React.createContext<ContextDerivatives>(null as any)
 
 export default function ReactContextProvider(props: React.PropsWithChildren) {
-  const [contextState, setContextState] = React.useState({ jokes: { Christmas: [], Programming: [] } })
+  const [contextState, setContextState] = React.useState<JokesState>({ Christmas: [], Programming: [] })
 
   return <ReactContextState.Provider value={{ contextState, setContextState }}>{props.children}</ReactContextState.Provider>
 }

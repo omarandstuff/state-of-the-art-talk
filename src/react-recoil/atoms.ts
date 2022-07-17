@@ -1,14 +1,5 @@
 import { atom } from 'recoil'
-
-interface Joke {
-  setup: string
-  deliver: string
-}
-
-interface JokesState {
-  Programming: Joke[]
-  Christmas: Joke[]
-}
+import { JokesState } from '../state.types'
 
 export const jokesAtom = atom<JokesState>({
   key: 'jokes-atom',

@@ -1,8 +1,9 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
 import RenderCount from '../../components/RenderCount'
+import { JokeType } from '../../state.types'
 
-export default function JokeViewer(props: { type: 'Programming' | 'Christmas'; index: number }) {
+export default function JokeViewer(props: { type: JokeType; index: number }) {
   const joke = useSelector((state: any) => state[props.type][props.index])
 
   return (

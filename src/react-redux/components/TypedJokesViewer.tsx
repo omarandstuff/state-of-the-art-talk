@@ -3,8 +3,9 @@ import RenderCount from '../../components/RenderCount'
 import { useSelector, useDispatch } from 'react-redux'
 import JokeViewer from './JokeViewer'
 import { setJokes } from '../jokesSlide'
+import { JokeType } from '../../state.types'
 
-export default function TypedJokesViewer(props: { type: 'Programming' | 'Christmas' }) {
+export default function TypedJokesViewer(props: { type: JokeType }) {
   const jokes = useSelector((state: any) => state[props.type])
   const dispatch = useDispatch()
 
