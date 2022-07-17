@@ -1,6 +1,7 @@
 import React from 'react'
 import { BrowserRouter, Link, Route, Routes } from 'react-router-dom'
 import ReactContext from './react-context/ReactContext'
+import ReactRecoil from './react-recoil/ReactRecoil'
 import ReactRedux from './react-redux/ReactRedux'
 
 function Home() {
@@ -13,6 +14,9 @@ function Home() {
         </li>
         <li>
           <Link to="/react-redux">React Redux</Link>
+        </li>
+        <li>
+          <Link to="/react-recoil">React Recoil</Link>
         </li>
       </ul>
     </div>
@@ -27,6 +31,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="react-context" element={<ReactContext />} />
           <Route path="react-redux" element={<ReactRedux />} />
+          <Route path="react-recoil" element={<ReactRecoil />} />
         </Routes>
       </BrowserRouter>
     </div>
