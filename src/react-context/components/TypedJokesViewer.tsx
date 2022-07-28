@@ -20,7 +20,7 @@ export default function TypedJokesViewer(props: { type: JokeType }) {
 
   return (
     <div style={{ border: '1px solid red' }}>
-      {/* <RenderCount></RenderCount> */}
+      <RenderCount></RenderCount>
       <h1>{props.type} Jokes</h1>
       {contextState[props.type].length ? (
         <div>

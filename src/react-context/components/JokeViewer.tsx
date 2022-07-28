@@ -8,7 +8,7 @@ export default function JokeViewer(props: { type: JokeType; index: number }) {
 
   return (
     <div style={{ border: '1px solid blue' }}>
-      {/* <RenderCount></RenderCount> */}
+      <RenderCount></RenderCount>
       <h3>Joke {props.index + 1}</h3>
       <div>
         <span>{contextState[props.type][props.index].setup}</span> <br></br> <span>{contextState[props.type][props.index].delivery}</span>
